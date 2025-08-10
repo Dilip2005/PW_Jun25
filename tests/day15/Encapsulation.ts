@@ -9,7 +9,7 @@ class loginData{
     public get readUserName(){
         return this.username;
 
-        console.log("Check is Updated in Vs code)
+        console.log("Check is Updated in Vs code")
     }
 
 

@@ -36,6 +36,10 @@ step:7 --> push the file
         git push -u origin master/main
 
 
+step:8-> git pull
+        git pull origin master/main
+
+
 
 Geo location:
  is used when you want to simulate a browser’s location 
