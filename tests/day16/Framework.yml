@@ -1,0 +1,75 @@
+# Framework Overview
+This document provides an overview of the Playwright-based testing framework used for Salesforce applications. It outlines
+
+Structure & Components
+pages/
+Contains Page Object Model (POM) classes like salesforceLogin, salesforceHomePage, etc.
+Each class encapsulates actions and selectors for a specific page.
+
+helpers/
+Utility classes for common actions, e.g., playwright (wrapper for Playwright actions), csvUtil, fakerUtils.
+
+constants/
+Stores constants like URLs (urlConstants) and credentials (credentialData).
+
+customFixtures/
+Custom Playwright fixtures for advanced setup/teardown (salesForceFixture).
+
+api/
+API test scripts and services for backend testing.
+
+tests/
+Test scripts (e.g., TC001_create_account.spec.ts) that use page objects and helpers.
+
+data/
+Test data in various formats: JSON, CSV, ENV.
+
+logins/
+Stores login state for faster test execution.
+
+How It Works
+Page Object Model (POM):
+Each page class (e.g., salesforceLogin) provides methods for interacting with page elements, improving code reuse and readability.
+
+Wrapper Class:
+PlaywrightWrapper abstracts common Playwright actions (click, type, wait), making tests cleaner and easier to maintain.
+
+Fixtures & Setup:
+Custom fixtures and global setup (global.setup.ts) handle browser/context initialization and login state management.
+
+Data-Driven Testing:
+Test data is externalized in CSV/JSON/ENV files for easy parameterization.
+
+API Integration:
+API tests are included for end-to-end coverage.
+
+Best Practices
+Use Page Objects:
+Encapsulate selectors and actions in page classes for maintainability.
+
+Abstract Common Actions:
+Use wrapper/helper classes for repetitive actions.
+
+Externalize Test Data:
+Store data in separate files (CSV, JSON, ENV) for flexibility.
+
+Use Fixtures:
+Set up and tear down environments using Playwright fixtures.
+
+Organize Code:
+Keep constants, helpers, data, and tests in dedicated folders.
+
+Parameterize Tests:
+Drive tests with multiple data sets for better coverage.
+
+Add Custom Reporters:
+Integrate reporting tools for better visibility (see customReporterConfig.ts).
+
+Retry Logic:
+Implement retries for flaky tests.
+
+Version Control:
+Use .gitignore and commit only necessary files.
+
+Documentation:
+Document your framework and test cases for easy onboarding.

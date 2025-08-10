@@ -1,0 +1,112 @@
+week8:day1
+
+-> Encapsulation
+-> Wrapper methods
+-> CI Integrations 
+
+Encapsulation:
+Hiding data 
+
+class Data{
+private age:number
+
+//get method read value 
+get value(){
+return this.age
+}
+}
+
+const ob=new Data()
+on.value()
+
+
+
+
+GitHub Action-> Continuous Integration
+-> Nightly run
+-Remote in different environment
+
+or create a new repository on the command line
+echo "# PW_Jun25" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/Dilip2005/PW_Jun25.git
+git push -u origin main
+…or push an existing repository from the command line
+git remote add origin https://github.com/Dilip2005/PW_Jun25.git
+git branch -M main
+git push -u origin main
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Step 2: Initialize Playwright
+npm init playwright@latest
+Step 3: Enable Gitflow Actions
+Initialize Git in your project and follow the Gitflow branching model for version control.
+
+Step 4: Organize the Project Structure
+Organize your project as follows:
+
+my-playwright-framework
+│
+├── .github
+├── node_modules
+├── pages
+│   ├── LoginPage.ts
+│   ├── HomePage.ts
+│   └── ServicePage.ts
+├── tests
+│   └── createAccount.spec.ts
+├── utils
+│   └── playwright.ts
+├── constants
+│   └── urlConstants.ts
+├── customFixtures
+│   └── salesforceFixture.ts
+├── api
+│   └── apiTest.ts
+├── data
+│   ├── dataUtility.ts
+│   ├── .env
+│   ├── data.csv
+│   ├── data.json
+│   └── data.xlsx
+├── package.json
+├── package-lock.json
+├── playwright.config.ts
+└── tsconfig.json
+Step 5: Initialize TypeScript
+tsc --init
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
